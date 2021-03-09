@@ -11,7 +11,7 @@ display_help() {
 }
 
 savePackages() {
-  save_path=$HOME'/software installers/'
+  save_path=$HOME'/software installers/install-logs/'
   log_extension='.list'
   final_save_path=$save_path
   final_save_path+=$1
@@ -30,3 +30,4 @@ fi
 
 savePackages $1
 
+# cron * 12 * * * bash ~/scripts/vlog-current-installed-packages.sh $(date +%Y.%m.%d)
